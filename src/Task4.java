@@ -8,10 +8,12 @@ public class Task4 {
         scan.close();
         boolean increasingSequence = false;
         int temp = number;
-        while (temp / 10 != 0) {
-            if (temp % 10 == (temp / 10 % 10) + 1) {
+        int lowerTemp = temp/10;
+        while (lowerTemp != 0) {
+            if (temp % 10 > (lowerTemp % 10)) {
                 increasingSequence = true;
-                temp /= 10;
+                temp = lowerTemp;
+                lowerTemp /= 10;
             } else {
                 increasingSequence = false;
                 break;
