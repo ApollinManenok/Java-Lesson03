@@ -6,7 +6,6 @@ public class Task1 {
         int[] arr = new int[10];
         System.out.print("Enter 10 numbers separated by space: ");
         for (int i = 0; i < 10; i++) {
-            //System.out.print("\nEnter number " + (i + 1) + ": ");
             arr[i] = scan.nextInt();
         }
         scan.close();
@@ -26,11 +25,8 @@ public class Task1 {
                 arr[i] = 99;
         }
         System.out.print("Your result array: [");
-        for (int i = 0; i < 10; i++) {
-            System.out.print(arr[i]);
-            if (i < 9)
-                System.out.print(", ");
-        }
-        System.out.print("]");
+        for (int i = 0; i < 9; i++)
+            System.out.printf("%d, ", arr[i]);
+        System.out.print(arr[arr.length-1]+"]");
     }
 }
